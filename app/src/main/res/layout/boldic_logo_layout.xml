@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <View
+        android:id="@+id/logo_circle_shape"
+        android:layout_width="@dimen/circle_size"
+        android:layout_height="@dimen/circle_size"
+        android:background="@drawable/splash_screen_shapes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/boldic_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/boldic"
+        android:textSize="@dimen/text_size_60"
+        android:fontFamily="@font/noto_serif_bold"
+        android:textStyle="bold"
+        android:textColor="@color/main_color"
+        app:layout_constraintTop_toTopOf="@id/logo_circle_shape"
+        app:layout_constraintBottom_toBottomOf="@id/logo_circle_shape"
+        app:layout_constraintStart_toStartOf="@id/logo_circle_shape"
+        app:layout_constraintEnd_toEndOf="@id/logo_circle_shape"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/find_you_style"
+        app:layout_constraintTop_toBottomOf="@id/boldic_text"
+        android:textSize="@dimen/text_size_16"
+        android:fontFamily="@font/noto_serif_regular"
+        android:textColor="#707070"
+        android:textStyle="bold"
+        android:letterSpacing="0.2"
+        app:layout_constraintStart_toStartOf="@id/boldic_text"
+        app:layout_constraintEnd_toEndOf="@id/boldic_text"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

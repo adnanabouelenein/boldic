@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".productanddetails.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_color">
+
+        <ViewFlipper
+            android:id="@+id/view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="375dp"
+            android:background="@color/gray_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/search_edit_text"
+            android:layout_width="@dimen/space_280_dp"
+            android:layout_height="@dimen/space_40_dp"
+            android:layout_marginStart="@dimen/space_16_dp"
+            android:layout_marginTop="@dimen/space_16_dp"
+            android:background="@drawable/custom_edit_text"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/space_8_dp"
+            android:hint="@string/search_product"
+            android:paddingStart="@dimen/space_8_dp"
+            android:textSize="@dimen/text_size_12"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/cart_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_16_dp"
+            android:background="@color/transparent_color"
+            android:src="@drawable/cart_icon"
+            app:layout_constraintBottom_toBottomOf="@id/search_edit_text"
+            app:layout_constraintStart_toEndOf="@id/search_edit_text"
+            app:layout_constraintTop_toTopOf="@id/search_edit_text" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/wish_list_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_16_dp"
+            android:background="@color/transparent_color"
+            android:src="@drawable/wish_list_icon"
+            app:layout_constraintBottom_toBottomOf="@id/search_edit_text"
+            app:layout_constraintStart_toEndOf="@id/cart_button"
+            app:layout_constraintTop_toTopOf="@id/search_edit_text" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/see_all_promo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_16_dp"
+            android:background="@color/transparent_color"
+            android:text="@string/see_all_promo"
+            android:textColor="@color/green"
+            app:layout_constraintEnd_toEndOf="@id/view_flipper"
+            app:layout_constraintTop_toBottomOf="@id/view_flipper" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_brief"
+            android:layout_width="344dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="@dimen/space_56_dp"
+            android:background="@drawable/custom_edit_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_flipper">
+
+            <ImageView
+                android:id="@+id/profile_icon"
+                android:layout_width="@dimen/space_24_dp"
+                android:layout_height="@dimen/space_32_dp"
+                android:layout_marginStart="@dimen/space_32_dp"
+                android:src="@drawable/profile_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/user_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16_dp"
+                android:text="@string/Jonathan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/profile_icon"
+                app:layout_constraintTop_toTopOf="@id/profile_icon" />
+
+            <TextView
+                android:id="@+id/memebership_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/silver_member"
+                android:textSize="@dimen/text_size_10"
+                app:layout_constraintBottom_toBottomOf="@id/profile_icon"
+                app:layout_constraintStart_toStartOf="@id/user_name_text" />
+
+            <ImageButton
+                android:id="@+id/add_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_56_dp"
+                android:background="@color/transparent_color"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="@id/memebership_level"
+                app:layout_constraintStart_toEndOf="@id/user_name_text"
+                app:layout_constraintTop_toTopOf="@id/user_name_text" />
+
+            <TextView
+                android:id="@+id/price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_16_dp"
+                android:text="@string/price_dollar"
+                android:textColor="@color/brown"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/add_button"
+                app:layout_constraintTop_toTopOf="@id/add_button" />
+
+            <TextView
+                android:id="@+id/add_funds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_serif_regular"
+                android:text="@string/add_funds"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_size_10"
+                app:layout_constraintStart_toStartOf="@id/price_text"
+                app:layout_constraintTop_toBottomOf="@id/price_text" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categories_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            app:layout_constraintStart_toStartOf="@id/profile_brief"
+            app:layout_constraintTop_toBottomOf="@id/profile_brief"
+            tools:listitem="@layout/categories_list_item" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/offers_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_104_dp"
+            android:layout_marginTop="@dimen/space_16_dp"
+            app:layout_constraintEnd_toEndOf="@id/categories_recycler_view"
+            app:layout_constraintStart_toStartOf="@id/categories_recycler_view"
+            app:layout_constraintTop_toBottomOf="@id/categories_recycler_view"
+            tools:listitem="@layout/offers_list_item" />
+
+        <TextView
+            android:id="@+id/best_seller_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_16_dp"
+            android:layout_marginTop="@dimen/space_32_dp"
+            android:text="@string/best_seller"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/offers_recycler_view" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/see_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_color"
+            android:text="@string/see_all_promo"
+            android:textColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@id/best_seller_text"
+            app:layout_constraintEnd_toEndOf="@id/see_all_promo_button"
+            app:layout_constraintTop_toTopOf="@id/best_seller_text" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/best_offer_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="232dp"
+            android:layout_marginTop="@dimen/space_16_dp"
+            app:layout_constraintStart_toStartOf="@id/best_seller_text"
+            app:layout_constraintTop_toBottomOf="@id/best_seller_text"
+            tools:listitem="@layout/best_offers_list_item" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

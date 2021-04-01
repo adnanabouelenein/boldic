@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/on_boarding_nav_graph"
+    app:startDestination="@id/onBoardingOneFragment">
+
+    <fragment
+        android:id="@+id/onBoardingOneFragment"
+        android:name="com.adnanabouelenein.boldic.onboarding.OnBoardingOneFragment"
+        android:label="fragment_on_boarding_one"
+        tools:layout="@layout/fragment_on_boarding_one" >
+        <action
+            android:id="@+id/action_onBoardingOneFragment_to_onBoardingTwoFragment"
+            app:destination="@id/onBoardingTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingTwoFragment"
+        android:name="com.adnanabouelenein.boldic.onboarding.OnBoardingTwoFragment"
+        android:label="fragment_on_boarding_two"
+        tools:layout="@layout/fragment_on_boarding_two" >
+        <action
+            android:id="@+id/action_onBoardingTwoFragment_to_onBoardingThreeFragment"
+            app:destination="@id/onBoardingThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingThreeFragment"
+        android:name="com.adnanabouelenein.boldic.onboarding.OnBoardingThreeFragment"
+        android:label="fragment_on_boarding_three"
+        tools:layout="@layout/fragment_on_boarding_three" >
+        <action
+            android:id="@+id/action_onBoardingThreeFragment_to_onBoardingFourFragment"
+            app:destination="@id/onBoardingFourFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFourFragment"
+        android:name="com.adnanabouelenein.boldic.onboarding.OnBoardingFourFragment"
+        android:label="fragment_on_boarding_four"
+        tools:layout="@layout/fragment_on_boarding_four" >
+        <action
+            android:id="@+id/action_onBoardingFourFragment_to_welcomeFragment2"
+            app:destination="@id/welcomeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment2"
+        android:name="com.adnanabouelenein.boldic.onboarding.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" />
+</navigation>

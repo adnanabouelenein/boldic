@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/space_168_dp"
+    android:layout_height="@dimen/space_296_dp"
+    android:layout_margin="@dimen/space_16_dp"
+    app:cardCornerRadius="@dimen/space_8_dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_product_list"
+            android:layout_width="@dimen/space_152_dp"
+            android:layout_height="@dimen/space_152_dp"
+            android:layout_marginTop="4dp"
+            app:cardCornerRadius="@dimen/space_8_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/item_image_best_offers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:src="@tools:sample/avatars" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/item_title_product_list"
+            android:layout_width="@dimen/space_144_dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16"
+            tools:text="Stylish Jacket Prodigy for Your Daily Outfits.."
+            app:layout_constraintTop_toBottomOf="@id/image_product_list"
+            app:layout_constraintStart_toStartOf="@id/image_product_list"
+            android:layout_marginTop="@dimen/space_8_dp"
+            android:textColor="@color/main_color"/>
+
+        <TextView
+            android:id="@+id/price_text_product_list"
+            android:layout_width="@dimen/space_104_dp"
+            android:layout_height="@dimen/space_24_dp"
+            android:textSize="@dimen/text_size_18"
+            tools:text="$129.00"
+            android:fontFamily="@font/noto_serif_bold"
+            app:layout_constraintTop_toBottomOf="@id/item_title_product_list"
+            app:layout_constraintStart_toStartOf="@id/item_title_product_list"
+            android:layout_marginTop="@dimen/space_8_dp"
+            android:textColor="@color/main_color"/>
+
+        <TextView
+            android:id="@+id/products_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/price_text_product_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/space_16_dp"
+            tools:text="5 left"/>
+
+        <View
+            android:id="@+id/view_hold_rate_product_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_24_dp"
+            android:background="@color/circle_shape_color"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <RatingBar
+            android:id="@+id/rating_bar_product_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="1"
+            android:rating="1"
+            android:saveEnabled="true"
+            style="?android:attr/ratingBarStyleSmall"
+            android:theme="@style/RatingBar"
+            app:layout_constraintTop_toTopOf="@id/view_hold_rate_product_list"
+            app:layout_constraintBottom_toBottomOf="@id/view_hold_rate_product_list"
+            app:layout_constraintStart_toStartOf="@id/view_hold_rate_product_list"
+            android:layout_marginStart="4dp"/>
+
+
+        <TextView
+            android:id="@+id/rate_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/rating_bar_product_list"
+            app:layout_constraintBottom_toBottomOf="@id/rating_bar_product_list"
+            app:layout_constraintStart_toEndOf="@id/rating_bar_product_list"
+            android:layout_marginStart="@dimen/space_8_dp"
+            android:textColor="@color/white"
+            tools:text="4.8"
+            android:textSize="@dimen/text_size_8"/>
+
+        <TextView
+            android:id="@+id/products_ordered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/rating_bar_product_list"
+            app:layout_constraintBottom_toBottomOf="@id/rating_bar_product_list"
+            app:layout_constraintEnd_toEndOf="@id/products_left_text"
+            android:textColor="@color/white"
+            tools:text="(122)"
+            android:textSize="@dimen/text_size_8"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

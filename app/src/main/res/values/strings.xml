@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Boldic</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pref_previously_started">first entry</string>
+    <string name="pref_login_first_started">login first entry</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <string name="amazing_experince">Login or Signup to get our special deals,\n Amazing experience awaits you!</string>
+    <string name="login">Login</string>
+    <string name="sign_up_it_s_free">Sign Up It\'s Free</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="next">Next</string>
+    <string name="on_board_one_text">Need a good recommendation to wear? \n Find the best fashion here!</string>
+    <string name="find_your_best">Find Your Best</string>
+    <string name="try_it_love_it">Try it, Love it</string>
+    <string name="looking_for_the_best">Looking for the best clothes to wear? We have a lot of recommendation!</string>
+    <string name="best_choice_to_wear">Best Choice To Wear</string>
+    <string name="best_choice">Best clothes choice for you to wear, Hear it from our latest buyer!</string>
+    <string name="best_price_you_can_get">Best Price You Can Get</string>
+    <string name="best_clothes">Best clothes choice for you to wear, Hear it from our latest buyer!</string>
+    <string name="boldic">Boldic</string>
+    <string name="find_you_style">FIND YOU STYLE</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="Login_text">Login to get our special deals, \n Amazing experience awaits you!</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up_here">Sign Up here</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_account">Already have account?</string>
+    <string name="login_here">Login Here</string>
+    <string name="enter_your_email_address">Enter your email address associated \n with your account</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="your_password_was">Your Password \n Was Successfully \n Changed</string>
+    <string name="search_product">Search Product</string>
+    <string name="see_all_promo">See all promo</string>
+    <string name="Jonathan">Jonathan Davis</string>
+    <string name="silver_member">Silver member</string>
+    <string name="price_dollar">$ 5,860</string>
+    <string name="add_funds">Add funds</string>
+    <string name="best_seller">Best Seller</string>
+    <string name="promotions">Promotions</string>
+    <string name="product_price">$ 229</string>
+
+</resources>

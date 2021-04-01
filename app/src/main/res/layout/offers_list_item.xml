@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/space_288_dp"
+    android:layout_height="@dimen/space_88_dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/space_8_dp"
+    app:cardCornerRadius="@dimen/space_16_dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/green">
+
+        <TextView
+            android:id="@+id/offer_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/space_16_dp"
+            android:layout_marginStart="@dimen/space_16_dp"
+            android:textSize="@dimen/text_size_14"
+            android:fontFamily="@font/noto_serif_bold"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Free Shipping and Cashback 80%"/>
+
+
+        <TextView
+            android:id="@+id/offer_description"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintStart_toStartOf="@id/offer_title"
+            app:layout_constraintTop_toBottomOf="@id/offer_title"
+            android:layout_marginTop="4dp"
+            tools:text="Get our special deals, amazing experience awaits you!"
+            android:textColor="@color/white"
+            android:fontFamily="@font/noto_serif_regular"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

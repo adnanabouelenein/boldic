@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    tools:context=".productanddetails.ProductDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/back_button_product_details"
+            android:layout_width="@dimen/space_32_dp"
+            android:layout_height="@dimen/space_32_dp"
+            android:layout_marginStart="@dimen/space_16_dp"
+            android:layout_marginTop="@dimen/space_16_dp"
+            android:background="@drawable/circle_icon"
+            android:src="@drawable/arrow_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/cart_button"
+            android:layout_width="@dimen/space_32_dp"
+            android:layout_height="@dimen/space_32_dp"
+            android:layout_marginEnd="@dimen/space_16_dp"
+            android:background="@drawable/circle_icon"
+            android:src="@drawable/cart_icon"
+            app:layout_constraintBottom_toBottomOf="@id/back_button_product_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back_button_product_details" />
+
+        <ViewFlipper
+            android:id="@+id/view_flipper_product_details_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_376_dp"
+            android:layout_marginTop="@dimen/space_16_dp"
+            android:background="@color/gray_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back_button_product_details" />
+
+        <View
+            android:id="@+id/details_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_72_dp"
+            android:background="@color/transparent_orange"
+            app:layout_constraintTop_toBottomOf="@id/view_flipper_product_details_fragment" />
+
+        <TextView
+            android:id="@+id/product_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_16_dp"
+            android:fontFamily="@font/noto_serif_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_32_sp"
+            app:layout_constraintBottom_toBottomOf="@id/details_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/details_view"
+            tools:text="$ 229" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_32_dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintBottom_toBottomOf="@id/product_price_text"
+            app:layout_constraintStart_toEndOf="@id/product_price_text"
+            app:layout_constraintTop_toTopOf="@id/product_price_text"
+            tools:text="$160 Save 20%" />
+
+        <TextView
+            android:id="@+id/product_title_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_16_dp"
+            android:layout_marginTop="@dimen/space_16_dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_20"
+            tools:text="Male Water Proof Jacket"
+            android:fontFamily="@font/noto_serif_bold"
+            app:layout_constraintTop_toBottomOf="@id/details_view"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RatingBar
+            android:id="@+id/rating_bar_product_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="1"
+            android:rating="1"
+            android:saveEnabled="true"
+            style="?android:attr/ratingBarStyleSmall"
+            android:theme="@style/RatingBar"
+            android:layout_marginTop="@dimen/space_16_dp"
+            app:layout_constraintStart_toStartOf="@id/product_title_detail"
+            app:layout_constraintTop_toBottomOf="@id/product_title_detail"/>
+
+
+        <TextView
+            android:id="@+id/rate_number_text_product_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/rating_bar_product_details"
+            app:layout_constraintBottom_toBottomOf="@id/rating_bar_product_details"
+            app:layout_constraintStart_toEndOf="@id/rating_bar_product_details"
+            android:layout_marginStart="@dimen/space_8_dp"
+            android:textColor="@color/white"
+            tools:text="4.8"
+            android:textSize="@dimen/text_size_12"/>
+
+        <TextView
+            android:id="@+id/products_ordered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/rating_bar_product_details"
+            app:layout_constraintBottom_toBottomOf="@id/rating_bar_product_details"
+           app:layout_constraintStart_toEndOf="@id/rate_number_text_product_details"
+            android:layout_marginStart="@dimen/space_16_dp"
+            android:textColor="@color/white"
+            tools:text="(122)"
+            android:textSize="@dimen/text_size_12"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

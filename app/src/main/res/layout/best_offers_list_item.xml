@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/space_112_dp"
+    android:layout_height="@dimen/space_216_dp"
+    android:layout_margin="@dimen/space_8_dp"
+    app:cardCornerRadius="@dimen/space_8_dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image"
+            android:layout_width="@dimen/space_96_dp"
+            android:layout_height="@dimen/space_96_dp"
+            android:layout_marginTop="4dp"
+            app:cardCornerRadius="@dimen/space_8_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/item_image_best_offers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:src="@tools:sample/avatars" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="@dimen/space_88_dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_10"
+            tools:text="Stylish Jacket Prodigy for Your Daily Outfits.."
+            app:layout_constraintTop_toBottomOf="@id/image"
+            app:layout_constraintStart_toStartOf="@id/image"
+            android:layout_marginTop="@dimen/space_8_dp"
+            android:textColor="@color/main_color"/>
+
+        <TextView
+            android:layout_width="@dimen/space_88_dp"
+            android:layout_height="@dimen/space_24_dp"
+            android:textSize="@dimen/text_size_16"
+            tools:text="$129.00"
+            android:fontFamily="@font/noto_serif_bold"
+            app:layout_constraintTop_toBottomOf="@id/item_title"
+            app:layout_constraintStart_toStartOf="@id/item_title"
+            android:layout_marginTop="@dimen/space_8_dp"
+            android:textColor="@color/main_color"/>
+
+        <View
+            android:id="@+id/view_hold_rate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_24_dp"
+            android:background="@color/circle_shape_color"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="5"
+            android:saveEnabled="true"
+            style="?android:attr/ratingBarStyleSmall"
+            android:theme="@style/RatingBar"
+            app:layout_constraintTop_toTopOf="@id/view_hold_rate"
+            app:layout_constraintBottom_toBottomOf="@id/view_hold_rate"
+            app:layout_constraintStart_toStartOf="@id/view_hold_rate"
+            android:layout_marginStart="4dp"/>
+
+        <TextView
+            android:id="@+id/time_ordered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/rating_bar"
+            app:layout_constraintTop_toTopOf="@id/rating_bar"
+            app:layout_constraintBottom_toBottomOf="@id/rating_bar"
+            app:layout_constraintEnd_toEndOf="@id/view_hold_rate"
+            android:textColor="@color/white"
+            tools:text="(122)"
+            android:textSize="@dimen/text_size_8"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

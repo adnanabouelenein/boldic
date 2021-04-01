@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/on_board_three"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".onboarding.OnBoardingThreeFragment">
+
+    <ImageView
+        android:id="@+id/point_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/on_board_three_point"
+        app:layout_constraintStart_toStartOf="@id/best_choice_to_wear"
+        app:layout_constraintBottom_toTopOf="@id/best_choice_to_wear"
+        app:layout_constraintEnd_toEndOf="@id/best_choice_to_wear"
+        android:layout_marginBottom="@dimen/space_48_dp"/>
+
+
+    <TextView
+        android:id="@+id/best_choice_to_wear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/best_choice_to_wear"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/best_choice_text"
+        app:layout_constraintStart_toStartOf="@id/best_choice_text"
+        app:layout_constraintEnd_toEndOf="@id/best_choice_text"
+        android:layout_marginBottom="@dimen/space_16_dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/noto_serif_regular"
+        android:textSize="@dimen/text_size_24"/>
+
+    <TextView
+        android:id="@+id/best_choice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_text_color"
+        android:textAlignment="center"
+        android:fontFamily="@font/noto_serif_regular"
+        android:text="@string/best_choice"
+        android:textSize="@dimen/text_size_14"
+        android:layout_marginBottom="@dimen/space_32_dp"
+        app:layout_constraintBottom_toTopOf="@id/next_to_on_board_four"
+        app:layout_constraintStart_toStartOf="@id/next_to_on_board_four"
+        app:layout_constraintEnd_toEndOf="@id/next_to_on_board_four"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_to_on_board_four"
+        android:layout_width="@dimen/space_240_dp"
+        android:layout_height="@dimen/space_56_dp"
+        android:background="@drawable/btn_shape_white"
+        android:text="@string/next"
+        android:fontFamily="@font/noto_serif_regular"
+        android:layout_marginBottom="@dimen/space_40_dp"
+        android:textSize="@dimen/text_size_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/black"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

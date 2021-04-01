@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".registeration.SignUpFragment">
+
+    <TextView
+        android:id="@+id/welcome_text_login_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
+        android:layout_marginBottom="@dimen/space_8_dp"
+        android:fontFamily="@font/noto_serif_bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_32_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Create Account" />
+
+    <TextView
+        android:id="@+id/sub_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8_dp"
+        android:layout_marginBottom="@dimen/space_56_dp"
+        android:fontFamily="@font/noto_serif_regular"
+        android:letterSpacing="0.1"
+        android:text="@string/Login_text"
+        android:textAlignment="center"
+        android:textColor="@color/gray_text_color"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintEnd_toEndOf="@id/welcome_text_login_fragment"
+        app:layout_constraintStart_toStartOf="@id/welcome_text_login_fragment"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text_login_fragment" />
+
+    <EditText
+        android:id="@+id/email_edit_text_sign_up_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48_dp"
+        android:layout_marginStart="@dimen/space_16_dp"
+        android:layout_marginEnd="@dimen/space_16_dp"
+        android:background="@drawable/custom_edit_text"
+        android:drawableStart="@drawable/custom_edit_text_email_clicked"
+        android:drawablePadding="@dimen/space_16_dp"
+        android:hint="@string/email"
+        android:paddingStart="@dimen/space_16_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/password_edit_text_sign_up_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48_dp"
+        android:layout_marginStart="@dimen/space_16_dp"
+        android:layout_marginTop="@dimen/space_16_dp"
+        android:layout_marginEnd="@dimen/space_16_dp"
+        android:background="@drawable/custom_edit_text"
+        android:drawableStart="@drawable/custom_edit_text_lock_clicked"
+        android:drawablePadding="@dimen/space_16_dp"
+        android:hint="@string/password"
+        android:paddingStart="@dimen/space_16_dp"
+        app:layout_constraintEnd_toEndOf="@id/email_edit_text_sign_up_fragment"
+        app:layout_constraintStart_toStartOf="@id/email_edit_text_sign_up_fragment"
+        app:layout_constraintTop_toBottomOf="@id/email_edit_text_sign_up_fragment" />
+
+    <EditText
+        android:id="@+id/password_edit_text_confirm_sign_up_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48_dp"
+        android:layout_marginStart="@dimen/space_16_dp"
+        android:layout_marginTop="@dimen/space_16_dp"
+        android:layout_marginEnd="@dimen/space_16_dp"
+        android:background="@drawable/custom_edit_text"
+        android:drawableStart="@drawable/custom_edit_text_lock_clicked"
+        android:drawablePadding="@dimen/space_16_dp"
+        android:hint="@string/confirm_password"
+        android:paddingStart="@dimen/space_16_dp"
+        app:layout_constraintEnd_toEndOf="@id/email_edit_text_sign_up_fragment"
+        app:layout_constraintStart_toStartOf="@id/email_edit_text_sign_up_fragment"
+        app:layout_constraintTop_toBottomOf="@id/password_edit_text_sign_up_fragment" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_btn_login_fragment"
+        android:layout_width="@dimen/space_240_dp"
+        android:layout_height="@dimen/space_56_dp"
+        android:layout_marginTop="@dimen/space_48_dp"
+        android:background="@drawable/btn_shape_blue"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_edit_text_confirm_sign_up_fragment" />
+
+    <ImageButton
+        android:id="@+id/facebook_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_color"
+        android:src="@drawable/facebook_btn"
+        app:layout_constraintEnd_toStartOf="@id/twitter_button"
+        app:layout_constraintStart_toStartOf="@id/login_btn_login_fragment"
+        app:layout_constraintTop_toTopOf="@id/google_button" />
+
+    <ImageButton
+        android:id="@+id/google_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_color"
+        android:src="@drawable/google_btn"
+        app:layout_constraintEnd_toEndOf="@id/login_btn_login_fragment"
+        app:layout_constraintStart_toEndOf="@id/twitter_button"
+        app:layout_constraintTop_toBottomOf="@id/login_btn_login_fragment"
+        app:layout_constraintTop_toTopOf="@id/twitter_button" />
+
+    <ImageButton
+        android:id="@+id/twitter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_color"
+        android:src="@drawable/twitter_button"
+        app:layout_constraintBottom_toTopOf="@id/dont_have_account_text"
+        app:layout_constraintEnd_toStartOf="@id/google_button"
+        app:layout_constraintStart_toEndOf="@id/facebook_button"
+        app:layout_constraintTop_toBottomOf="@id/login_btn_login_fragment" />
+
+    <TextView
+        android:id="@+id/dont_have_account_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_40_dp"
+        android:fontFamily="@font/noto_serif_bold"
+        android:text="@string/already_have_account"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sign_up_button_login_fragment"
+        app:layout_constraintStart_toStartOf="@id/login_btn_login_fragment" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_up_button_login_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_8_dp"
+        android:background="@color/transparent_color"
+        android:text="@string/login_here"
+        android:textAllCaps="false"
+        android:textColor="@color/blue_text"
+        app:layout_constraintBottom_toBottomOf="@id/dont_have_account_text"
+        app:layout_constraintEnd_toEndOf="@id/login_btn_login_fragment"
+        app:layout_constraintStart_toEndOf="@id/dont_have_account_text"
+        app:layout_constraintTop_toTopOf="@id/dont_have_account_text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
