@@ -47,6 +47,7 @@
         android:drawableStart="@drawable/custom_edit_text_email_clicked"
         android:drawablePadding="@dimen/space_16_dp"
         android:hint="@string/email"
+        android:maxLines="1"
         android:paddingStart="@dimen/space_16_dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,6 +64,8 @@
         android:background="@drawable/custom_edit_text"
         android:drawableStart="@drawable/custom_edit_text_lock_clicked"
         android:drawablePadding="@dimen/space_16_dp"
+        android:inputType="textPassword"
+        android:maxLines="1"
         android:hint="@string/password"
         android:paddingStart="@dimen/space_16_dp"
         app:layout_constraintEnd_toEndOf="@id/email_edit_text_sign_up_fragment"
@@ -76,6 +79,8 @@
         android:layout_marginStart="@dimen/space_16_dp"
         android:layout_marginTop="@dimen/space_16_dp"
         android:layout_marginEnd="@dimen/space_16_dp"
+        android:inputType="textPassword"
+        android:maxLines="1"
         android:background="@drawable/custom_edit_text"
         android:drawableStart="@drawable/custom_edit_text_lock_clicked"
         android:drawablePadding="@dimen/space_16_dp"
@@ -86,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@id/password_edit_text_sign_up_fragment" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/login_btn_login_fragment"
+        android:id="@+id/sign_up_button"
         android:layout_width="@dimen/space_240_dp"
         android:layout_height="@dimen/space_56_dp"
         android:layout_marginTop="@dimen/space_48_dp"
@@ -106,7 +111,7 @@
         android:background="@color/transparent_color"
         android:src="@drawable/facebook_btn"
         app:layout_constraintEnd_toStartOf="@id/twitter_button"
-        app:layout_constraintStart_toStartOf="@id/login_btn_login_fragment"
+        app:layout_constraintStart_toStartOf="@id/sign_up_button"
         app:layout_constraintTop_toTopOf="@id/google_button" />
 
     <ImageButton
@@ -115,9 +120,9 @@
         android:layout_height="wrap_content"
         android:background="@color/transparent_color"
         android:src="@drawable/google_btn"
-        app:layout_constraintEnd_toEndOf="@id/login_btn_login_fragment"
+        app:layout_constraintEnd_toEndOf="@id/sign_up_button"
         app:layout_constraintStart_toEndOf="@id/twitter_button"
-        app:layout_constraintTop_toBottomOf="@id/login_btn_login_fragment"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_button"
         app:layout_constraintTop_toTopOf="@id/twitter_button" />
 
     <ImageButton
@@ -129,7 +134,7 @@
         app:layout_constraintBottom_toTopOf="@id/dont_have_account_text"
         app:layout_constraintEnd_toStartOf="@id/google_button"
         app:layout_constraintStart_toEndOf="@id/facebook_button"
-        app:layout_constraintTop_toBottomOf="@id/login_btn_login_fragment" />
+        app:layout_constraintTop_toBottomOf="@id/sign_up_button" />
 
     <TextView
         android:id="@+id/dont_have_account_text"
@@ -143,7 +148,7 @@
         android:textSize="@dimen/text_size_14"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/sign_up_button_login_fragment"
-        app:layout_constraintStart_toStartOf="@id/login_btn_login_fragment" />
+        app:layout_constraintStart_toStartOf="@id/sign_up_button" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sign_up_button_login_fragment"
@@ -155,7 +160,7 @@
         android:textAllCaps="false"
         android:textColor="@color/blue_text"
         app:layout_constraintBottom_toBottomOf="@id/dont_have_account_text"
-        app:layout_constraintEnd_toEndOf="@id/login_btn_login_fragment"
+        app:layout_constraintEnd_toEndOf="@id/sign_up_button"
         app:layout_constraintStart_toEndOf="@id/dont_have_account_text"
         app:layout_constraintTop_toTopOf="@id/dont_have_account_text" />
 
