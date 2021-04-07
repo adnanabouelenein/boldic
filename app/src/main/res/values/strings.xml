@@ -41,5 +41,21 @@
     <string name="best_seller">Best Seller</string>
     <string name="promotions">Promotions</string>
     <string name="product_price">$ 229</string>
+    <string name="see_all_reviews">See All Reviews</string>
+    <string name="separate_text">|</string>
+    <string name="sold">Sold:</string>
+    <string name="_0">0</string>
+    <string name="left">left:</string>
+    <string name="product_description_text">your go-to for all the latest trends, no matter who you are, where you’re from and what you’re up to. Our universal brand is here for you, and comes in Plus and Tall. Created by us, styled by you.</string>
+    <string name="qty">Qty:</string>
+    <string name="_2">2</string>
+    <string name="available_color">Available Color:</string>
+    <string name="size">Size:</string>
+    <string name="please_select_your_size">Please select your size</string>
+    <string name="you_might_also_like">You might also like:</string>
+    <string name="see_all">See all</string>
+    <string name="product_name">Male Water Proof Jacket</string>
+    <string name="count_images_text">1/5</string>
+    <string name="close">Close</string>
 
 </resources>

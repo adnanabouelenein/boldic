@@ -17,4 +17,8 @@
     <color name="brown">#55423D</color>
     <color name="golden_yellow">#FFCE00</color>
     <color name="transparent_orange">#80E84B21</color>
+    <color name="blue">#335AFE</color>
+    <color name="baby_blue">#33FEFE</color>
+    <color name="pink">#D733FE</color>
+    <color name="white_50">#83FFFFFF</color>
 </resources>

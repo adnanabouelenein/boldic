@@ -13,7 +13,7 @@
         android:layout_height="@dimen/space_32_dp"
         android:layout_marginStart="@dimen/space_16_dp"
         android:background="@drawable/circle_icon"
-        android:src="@drawable/arrow_icon"
+        android:src="@drawable/arrow_left"
         app:layout_constraintBottom_toBottomOf="@id/search_edit_text_products_fragment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/search_edit_text_products_fragment" />

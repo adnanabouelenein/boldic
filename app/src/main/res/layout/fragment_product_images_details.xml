@@ -1,14 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".productanddetails.ProductImagesDetailsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ViewFlipper
+        android:id="@+id/view_flipper_product_image_products"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@drawable/grediant_grey" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/product_title_detail_image_details_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_20"
+        android:text="@string/product_name"
+        android:fontFamily="@font/noto_serif_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/space_32_dp"/>
+
+    <View
+        android:id="@+id/container_of_images_count"
+        android:layout_width="@dimen/space_40_dp"
+        android:layout_height="@dimen/space_32_dp"
+        android:background="@drawable/btn_shape_white_8dp_raduis"
+        app:layout_constraintStart_toStartOf="@id/product_title_detail_image_details_fragment"
+        app:layout_constraintTop_toBottomOf="@id/product_title_detail_image_details_fragment"
+        android:layout_marginTop="@dimen/space_16_dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/count_images_text"
+        app:layout_constraintTop_toTopOf="@id/container_of_images_count"
+        app:layout_constraintBottom_toBottomOf="@id/container_of_images_count"
+        app:layout_constraintStart_toStartOf="@id/container_of_images_count"
+        app:layout_constraintEnd_toEndOf="@id/container_of_images_count"/>
+
+    <ImageButton
+        android:id="@+id/change_image_to_left"
+        android:layout_width="@dimen/space_40_dp"
+        android:layout_height="@dimen/space_40_dp"
+        android:background="@drawable/grey_circle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/space_16_dp"
+        android:src="@drawable/arrow_left"/>
+
+    <ImageButton
+        android:id="@+id/change_image_to_right"
+        android:layout_width="@dimen/space_40_dp"
+        android:layout_height="@dimen/space_40_dp"
+        android:background="@drawable/grey_circle"
+        app:layout_constraintTop_toTopOf="@id/change_image_to_left"
+        app:layout_constraintBottom_toBottomOf="@id/change_image_to_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/space_16_dp"
+        android:src="@drawable/arrow_right"/>
+
+    <TextView
+        android:id="@+id/color_available_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/available_color"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/white"
+        android:fontFamily="@font/noto_serif_bold"
+        android:layout_marginStart="@dimen/space_16_dp"
+        android:layout_marginBottom="@dimen/space_16_dp"
+        app:layout_constraintBottom_toTopOf="@id/circle_button_pink_image_fragment"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/circle_button_pink_image_fragment"
+        android:layout_width="@dimen/space_32_dp"
+        android:layout_height="@dimen/space_32_dp"
+        android:background="@drawable/circle_pink"
+        android:layout_marginTop="@dimen/space_24_dp"
+        app:layout_constraintStart_toStartOf="@id/color_available_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/space_40_dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/circle_button_blue_image_fragment"
+        android:layout_width="@dimen/space_32_dp"
+        android:layout_height="@dimen/space_32_dp"
+        android:background="@drawable/circle_blue"
+        android:layout_marginStart="@dimen/space_16_dp"
+        app:layout_constraintTop_toTopOf="@id/circle_button_pink_image_fragment"
+        app:layout_constraintBottom_toBottomOf="@id/circle_button_pink_image_fragment"
+        app:layout_constraintStart_toEndOf="@id/circle_button_pink_image_fragment"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/circle_button_baby_blue_image_fragment"
+        android:layout_width="@dimen/space_32_dp"
+        android:layout_height="@dimen/space_32_dp"
+        android:background="@drawable/circle_baby_blue"
+        android:layout_marginStart="@dimen/space_16_dp"
+        app:layout_constraintTop_toTopOf="@id/circle_button_pink_image_fragment"
+        app:layout_constraintBottom_toBottomOf="@id/circle_button_pink_image_fragment"
+        app:layout_constraintStart_toEndOf="@id/circle_button_blue_image_fragment"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/circle_button_black_image_fragment"
+        android:layout_width="@dimen/space_32_dp"
+        android:layout_height="@dimen/space_32_dp"
+        android:background="@drawable/circle_black"
+        android:layout_marginStart="@dimen/space_16_dp"
+        app:layout_constraintTop_toTopOf="@id/circle_button_pink_image_fragment"
+        app:layout_constraintBottom_toBottomOf="@id/circle_button_pink_image_fragment"
+        app:layout_constraintStart_toEndOf="@id/circle_button_baby_blue_image_fragment"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/circle_button_white_image_fragment"
+        android:layout_width="@dimen/space_32_dp"
+        android:layout_height="@dimen/space_32_dp"
+        android:background="@drawable/circle_white"
+        android:layout_marginStart="@dimen/space_16_dp"
+        app:layout_constraintTop_toTopOf="@id/circle_button_pink_image_fragment"
+        app:layout_constraintBottom_toBottomOf="@id/circle_button_pink_image_fragment"
+        app:layout_constraintStart_toEndOf="@id/circle_button_black_image_fragment"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape_orange"
+        android:drawableStart="@drawable/close_icon_white"
+        android:textColor="@color/white"
+        android:paddingEnd="@dimen/space_8_dp"
+        android:textAllCaps="false"
+        android:text="@string/close"
+        android:paddingStart="@dimen/space_8_dp"
+        app:layout_constraintTop_toTopOf="@id/circle_button_pink_image_fragment"
+        app:layout_constraintBottom_toBottomOf="@id/circle_button_pink_image_fragment"
+        android:layout_marginEnd="@dimen/space_16_dp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
