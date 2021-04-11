@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@id/welcome_text_login_fragment" />
 
     <EditText
-        android:id="@+id/email_edit_text"
+        android:id="@+id/email_edit_text_login_fragment"
         android:layout_width="match_parent"
         android:layout_height="@dimen/space_48_dp"
         android:layout_marginStart="@dimen/space_16_dp"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/password_edit_text"
+        android:id="@+id/password_edit_text_login_fragment"
         android:layout_width="match_parent"
         android:layout_height="@dimen/space_48_dp"
         android:layout_marginStart="@dimen/space_16_dp"
@@ -65,22 +65,22 @@
         android:drawablePadding="@dimen/space_16_dp"
         android:hint="@string/password"
         android:paddingStart="@dimen/space_16_dp"
-        app:layout_constraintEnd_toEndOf="@id/email_edit_text"
-        app:layout_constraintStart_toStartOf="@id/email_edit_text"
-        app:layout_constraintTop_toBottomOf="@id/email_edit_text" />
+        app:layout_constraintEnd_toEndOf="@id/email_edit_text_login_fragment"
+        app:layout_constraintStart_toStartOf="@id/email_edit_text_login_fragment"
+        app:layout_constraintTop_toBottomOf="@id/email_edit_text_login_fragment" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_btn_login_fragment"
         android:layout_width="@dimen/space_240_dp"
         android:layout_height="@dimen/space_56_dp"
         android:layout_marginTop="@dimen/space_48_dp"
-        android:background="@drawable/btn_shape"
+        android:background="@drawable/btn_shape_green"
         android:text="@string/login"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password_edit_text" />
+        app:layout_constraintTop_toBottomOf="@id/password_edit_text_login_fragment" />
 
     <ImageButton
         android:id="@+id/facebook_button"

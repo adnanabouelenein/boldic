@@ -40,7 +40,7 @@
     <string name="add_funds">Add funds</string>
     <string name="best_seller">Best Seller</string>
     <string name="promotions">Promotions</string>
-    <string name="product_price">$ 229</string>
+    <string name="product_price">$ 229.00</string>
     <string name="see_all_reviews">See All Reviews</string>
     <string name="separate_text">|</string>
     <string name="sold">Sold:</string>
@@ -57,5 +57,20 @@
     <string name="product_name">Male Water Proof Jacket</string>
     <string name="count_images_text">1/5</string>
     <string name="close">Close</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="select_all_items">Select All Items</string>
+    <string name="color">Color:</string>
+    <string name="_1">1</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="coupon">Safe up to 20% with our special coupon discount</string>
+    <string name="total_payment">Total Payment</string>
+    <string name="check_out">Check Out</string>
+    <string name="checkout">Checkout</string>
+    <string name="items_added">Items Added</string>
+    <string name="review_order">Review Order</string>
+    <string name="shipment_address">Shipment Address</string>
+    <string name="delete_or_add">Delete or Add</string>
+    <string name="email_password_empty">The Email and Password is empty</string>
 
 </resources>

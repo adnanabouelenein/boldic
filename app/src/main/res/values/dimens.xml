@@ -37,4 +37,6 @@
     <dimen name="space_520_dp">520dp</dimen>
     <dimen name="space_376_dp">376dp</dimen>
     <dimen name="text_size_20">20sp</dimen>
+    <dimen name="space_192_dp">192dp</dimen>
+    <dimen name="space_136_dp">136dp</dimen>
 </resources>

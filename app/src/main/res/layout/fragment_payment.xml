@@ -1,14 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_color"
     tools:context=".shoppingcart.PaymentFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageButton
+        android:id="@+id/back_button_payment_fragment"
+        android:layout_width="@dimen/space_32_dp"
+        android:layout_height="@dimen/space_32_dp"
+        android:layout_marginStart="@dimen/space_16_dp"
+        android:layout_marginTop="@dimen/space_16_dp"
+        android:background="@drawable/circle_icon"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/checkout_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_serif_bold"
+        android:text="@string/checkout"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18"
+        app:layout_constraintBottom_toBottomOf="@id/back_button_payment_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/back_button_payment_fragment" />
+
+    <View
+        android:id="@+id/details_view_payment_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_72_dp"
+        android:layout_marginTop="@dimen/space_16_dp"
+        android:background="@color/transparent_orange"
+        app:layout_constraintTop_toBottomOf="@id/checkout_text" />
+
+    <TextView
+        android:id="@+id/count_of_shipment_products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_serif_regular"
+        android:text="@string/_0"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintBottom_toBottomOf="@id/details_view_payment_fragment"
+        app:layout_constraintStart_toStartOf="@id/back_button_payment_fragment"
+        app:layout_constraintTop_toTopOf="@id/details_view_payment_fragment" />
+
+    <TextView
+        android:id="@+id/items_added_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/items_added"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/count_of_shipment_products"
+        app:layout_constraintStart_toEndOf="@id/count_of_shipment_products"
+        app:layout_constraintTop_toTopOf="@id/count_of_shipment_products" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="@dimen/space_144_dp"
+        android:background="@drawable/btn_shape_green"
+        android:layout_height="wrap_content"
+        android:text="@string/review_order"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/details_view_payment_fragment"
+        app:layout_constraintBottom_toBottomOf="@id/details_view_payment_fragment"
+        app:layout_constraintEnd_toEndOf="@id/details_view_payment_fragment"
+        android:layout_marginEnd="@dimen/space_16_dp"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/shipment_address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shipment_address"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_view_payment_fragment"
+        android:layout_marginTop="@dimen/space_16_dp"
+        android:layout_marginStart="@dimen/space_16_dp"
+        android:fontFamily="@font/noto_serif_bold"/>
+
+    <TextView
+        android:id="@+id/delete_or_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_color"
+        android:text="@string/delete_or_add"
+        android:textColor="@color/green"
+        app:layout_constraintTop_toTopOf="@id/shipment_address_text"
+        app:layout_constraintBottom_toBottomOf="@id/shipment_address_text"
+        android:textSize="@dimen/text_size_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/space_16_dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
