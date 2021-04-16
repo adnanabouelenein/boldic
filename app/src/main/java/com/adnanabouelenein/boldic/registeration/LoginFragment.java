@@ -1,11 +1,10 @@
 package com.adnanabouelenein.boldic.registeration;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
+
 
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
@@ -15,10 +14,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.adnanabouelenein.boldic.MainActivity;
-import com.adnanabouelenein.boldic.OnBoardingActivity;
+
 import com.adnanabouelenein.boldic.R;
-import com.adnanabouelenein.boldic.SplashActivity;
 import com.adnanabouelenein.boldic.data.Login;
 
 public class LoginFragment extends Fragment {
@@ -77,6 +74,8 @@ public class LoginFragment extends Fragment {
             }
         });
     }
+
+    
 
 
 }

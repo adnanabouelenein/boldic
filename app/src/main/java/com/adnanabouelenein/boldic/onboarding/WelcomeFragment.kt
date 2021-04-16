@@ -25,6 +25,10 @@ class WelcomeFragment : Fragment() {
         val signUp = view.findViewById<Button>(R.id.sign_up_btn_welcome_fragment)
         signUp.setOnClickListener { v -> Navigation.findNavController(v).
         navigate(R.id.action_welcomeFragment_to_signUpFragment) }
+
+        val forgotPassword = view.findViewById<Button>(R.id.forgot_password_btn_welcome_fragment)
+        forgotPassword.setOnClickListener { v -> Navigation.findNavController(v)
+                .navigate(R.id.action_welcomeFragment_to_forgotPasswordFragment) }
         return view
     }
 

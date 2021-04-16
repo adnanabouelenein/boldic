@@ -15,7 +15,9 @@ class OnBoardingTwoFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_on_boarding_two, container, false)
         val nextToOnBoardTwo = view.findViewById<Button>(R.id.next_to_on_board_three)
-        nextToOnBoardTwo.setOnClickListener { v -> Navigation.findNavController(v).navigate(R.id.action_onBoardingTwoFragment_to_onBoardingThreeFragment) }
+        nextToOnBoardTwo.setOnClickListener { v -> Navigation.
+        findNavController(v)
+                .navigate(R.id.action_onBoardingTwoFragment_to_onBoardingThreeFragment) }
         return view
     }
 }

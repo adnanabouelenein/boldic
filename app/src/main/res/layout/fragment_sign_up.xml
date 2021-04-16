@@ -11,14 +11,13 @@
         android:id="@+id/welcome_text_login_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="232dp"
         android:layout_marginBottom="@dimen/space_8_dp"
         android:fontFamily="@font/noto_serif_bold"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_32_sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sub_text"
         android:text="Create Account" />
 
     <TextView
@@ -35,7 +34,25 @@
         android:textSize="@dimen/text_size_14"
         app:layout_constraintEnd_toEndOf="@id/welcome_text_login_fragment"
         app:layout_constraintStart_toStartOf="@id/welcome_text_login_fragment"
-        app:layout_constraintTop_toBottomOf="@id/welcome_text_login_fragment" />
+        app:layout_constraintBottom_toTopOf="@id/phone"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48_dp"
+        android:layout_marginStart="@dimen/space_16_dp"
+        android:layout_marginBottom="@dimen/space_16_dp"
+        android:layout_marginEnd="@dimen/space_16_dp"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:background="@drawable/custom_edit_text"
+        android:drawableStart="@drawable/phone_clicked"
+        android:drawablePadding="@dimen/space_16_dp"
+        android:hint="@string/phone_number"
+        android:paddingStart="@dimen/space_16_dp"
+        app:layout_constraintEnd_toEndOf="@id/email_edit_text_sign_up_fragment"
+        app:layout_constraintStart_toStartOf="@id/email_edit_text_sign_up_fragment"
+        app:layout_constraintBottom_toTopOf="@id/email_edit_text_sign_up_fragment" />
 
     <EditText
         android:id="@+id/email_edit_text_sign_up_fragment"
@@ -73,22 +90,24 @@
         app:layout_constraintTop_toBottomOf="@id/email_edit_text_sign_up_fragment" />
 
     <EditText
-        android:id="@+id/password_edit_text_confirm_sign_up_fragment"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="@dimen/space_48_dp"
         android:layout_marginStart="@dimen/space_16_dp"
         android:layout_marginTop="@dimen/space_16_dp"
         android:layout_marginEnd="@dimen/space_16_dp"
-        android:inputType="textPassword"
+        android:inputType="text"
         android:maxLines="1"
         android:background="@drawable/custom_edit_text"
-        android:drawableStart="@drawable/custom_edit_text_lock_clicked"
+        android:drawableStart="@drawable/profile_icon_clicked"
         android:drawablePadding="@dimen/space_16_dp"
-        android:hint="@string/confirm_password"
+        android:hint="@string/name"
         android:paddingStart="@dimen/space_16_dp"
         app:layout_constraintEnd_toEndOf="@id/email_edit_text_sign_up_fragment"
         app:layout_constraintStart_toStartOf="@id/email_edit_text_sign_up_fragment"
         app:layout_constraintTop_toBottomOf="@id/password_edit_text_sign_up_fragment" />
+
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sign_up_button"
@@ -102,7 +121,7 @@
         android:textSize="@dimen/text_size_18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/password_edit_text_confirm_sign_up_fragment" />
+        app:layout_constraintTop_toBottomOf="@id/name" />
 
     <ImageButton
         android:id="@+id/facebook_button"
